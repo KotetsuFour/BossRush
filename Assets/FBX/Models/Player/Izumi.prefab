@@ -415,5 +415,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6489447675202979944, guid: 9ade5523b6f916f43a919cde252ff319, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3750142272287512392}
   m_SourcePrefab: {fileID: 100100000, guid: 9ade5523b6f916f43a919cde252ff319, type: 3}
+--- !u!1 &1008745718417346645 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6489447675202979944, guid: 9ade5523b6f916f43a919cde252ff319, type: 3}
+  m_PrefabInstance: {fileID: 6336827071536502845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3750142272287512392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008745718417346645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd0a10f35ba29f04389967e5161a4386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 0
+  currentHP: 0
+  physAttack: 0
+  specAttack: 0
+  physDefense: 0
+  specDefense: 0
+  type: 0
+  activeEffect: 0
+  move1UsesLeft: 0
+  move2UsesLeft: 0
+  move3UsesLeft: 0
+  move4UsesLeft: 0
