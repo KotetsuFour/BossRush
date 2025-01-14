@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3110069885258575998}
+  - component: {fileID: 7364038319325547762}
   m_Layer: 0
   m_Name: Teekl
   m_TagString: Untagged
@@ -32,6 +33,27 @@ Transform:
   - {fileID: 5422334615594744229}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7364038319325547762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3529154856900765558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28521e2d3e2a3fe49809f1b7623a8bf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 200
+  currentHP: 200
+  physAttack: 60
+  specAttack: 20
+  physDefense: 30
+  specDefense: 30
+  type: 1
+  activeEffect: 0
+  displayName: Teekl (FIRE)
 --- !u!1001 &5533439497614220878
 PrefabInstance:
   m_ObjectHideFlags: 0

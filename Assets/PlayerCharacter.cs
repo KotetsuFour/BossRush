@@ -4,13 +4,30 @@ using UnityEngine;
 
 public abstract class PlayerCharacter : GameEntity
 {
+    public string displayName;
+    public string displayNameWithType;
     public int move1UsesLeft;
     public int move2UsesLeft;
     public int move3UsesLeft;
     public int move4UsesLeft;
 
-    public abstract Move[] useMove1();
-    public abstract Move[] useMove2();
-    public abstract Move[] useMove3();
-    public abstract Move[] useMove4();
+    public abstract MovePackage useMove1();
+    public abstract MovePackage useMove2();
+    public abstract MovePackage useMove3();
+    public abstract MovePackage useMove4();
+
+    public class MovePackage
+    {
+        public string moveName;
+        public int type;
+        public Move[] moveEffects;
+        public int numLeft;
+        public string description;
+        public float animationTime;
+        public string animationToActivate;
+        public string attackParticles;
+        public string damageParticles;
+        public string attackSound;
+        public string damageSound;
+    }
 }

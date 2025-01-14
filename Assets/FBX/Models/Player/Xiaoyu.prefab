@@ -27,7 +27,7 @@ PrefabInstance:
     - target: {fileID: 445168681328154923, guid: 46989248469d88142a5c57024bae84db, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4ec3902fad0dd55479ef164a582af645, type: 2}
+      objectReference: {fileID: 2100000, guid: 37d840059140e534f8c45c1742bfcea4, type: 2}
     - target: {fileID: 458253153990993261, guid: 46989248469d88142a5c57024bae84db, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -51,7 +51,7 @@ PrefabInstance:
     - target: {fileID: 1169198960597796085, guid: 46989248469d88142a5c57024bae84db, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4ec3902fad0dd55479ef164a582af645, type: 2}
+      objectReference: {fileID: 2100000, guid: 37d840059140e534f8c45c1742bfcea4, type: 2}
     - target: {fileID: 1190392232874081845, guid: 46989248469d88142a5c57024bae84db, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -83,7 +83,7 @@ PrefabInstance:
     - target: {fileID: 1792160843460580707, guid: 46989248469d88142a5c57024bae84db, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4ec3902fad0dd55479ef164a582af645, type: 2}
+      objectReference: {fileID: 2100000, guid: 37d840059140e534f8c45c1742bfcea4, type: 2}
     - target: {fileID: 2011370794600720739, guid: 46989248469d88142a5c57024bae84db, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -119,7 +119,7 @@ PrefabInstance:
     - target: {fileID: 2972971722848889696, guid: 46989248469d88142a5c57024bae84db, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4ec3902fad0dd55479ef164a582af645, type: 2}
+      objectReference: {fileID: 2100000, guid: 37d840059140e534f8c45c1742bfcea4, type: 2}
     - target: {fileID: 3010794386876733849, guid: 46989248469d88142a5c57024bae84db, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -227,7 +227,7 @@ PrefabInstance:
     - target: {fileID: 4964416081034981618, guid: 46989248469d88142a5c57024bae84db, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4ec3902fad0dd55479ef164a582af645, type: 2}
+      objectReference: {fileID: 2100000, guid: 37d840059140e534f8c45c1742bfcea4, type: 2}
     - target: {fileID: 4964416081034981618, guid: 46989248469d88142a5c57024bae84db, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -263,7 +263,7 @@ PrefabInstance:
     - target: {fileID: 5315649880783489393, guid: 46989248469d88142a5c57024bae84db, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4ec3902fad0dd55479ef164a582af645, type: 2}
+      objectReference: {fileID: 2100000, guid: 37d840059140e534f8c45c1742bfcea4, type: 2}
     - target: {fileID: 5397189810973591429, guid: 46989248469d88142a5c57024bae84db, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -331,7 +331,7 @@ PrefabInstance:
     - target: {fileID: 7363635453694376623, guid: 46989248469d88142a5c57024bae84db, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4ec3902fad0dd55479ef164a582af645, type: 2}
+      objectReference: {fileID: 2100000, guid: 37d840059140e534f8c45c1742bfcea4, type: 2}
     - target: {fileID: 7363635453694376623, guid: 46989248469d88142a5c57024bae84db, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -429,15 +429,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22dcab1e476b22d4cae9bf61c6c1914f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 0
-  currentHP: 0
-  physAttack: 0
-  specAttack: 0
-  physDefense: 0
-  specDefense: 0
-  type: 0
+  maxHP: 200
+  currentHP: 200
+  physAttack: 30
+  specAttack: 50
+  physDefense: 40
+  specDefense: 10
+  type: 3
   activeEffect: 0
-  move1UsesLeft: 0
-  move2UsesLeft: 0
-  move3UsesLeft: 0
-  move4UsesLeft: 0
+  displayName: Xiaoyu
+  displayNameWithType: Xiaoyu (WIND)
+  move1UsesLeft: 40
+  move2UsesLeft: 5
+  move3UsesLeft: 40
+  move4UsesLeft: 5

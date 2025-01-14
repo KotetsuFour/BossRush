@@ -11,7 +11,7 @@ public class Sita : PlayerCharacter
     }
 
     //Slash
-    public override Move[] useMove1()
+    public override MovePackage useMove1()
     {
         Attack att = new Attack();
         att.numTargets = 1;
@@ -19,11 +19,19 @@ public class Sita : PlayerCharacter
         att.attackType = StaticData.NORM;
         att.physical = true;
 
-        Move[] ret = { att };
+        Move[] packEff = { att };
+
+        MovePackage ret = new MovePackage();
+        ret.moveEffects = packEff;
+        ret.type = StaticData.NORM;
+        ret.moveName = "Slash";
+        ret.numLeft = move1UsesLeft;
+        ret.description = "A standard sword slash.";
+
         return ret;
     }
     //Flame Slash
-    public override Move[] useMove2()
+    public override MovePackage useMove2()
     {
         Attack att = new Attack();
         att.numTargets = 1;
@@ -31,21 +39,37 @@ public class Sita : PlayerCharacter
         att.attackType = StaticData.FIRE;
         att.physical = false;
 
-        Move[] ret = { att };
+        Move[] packEff = { att };
+
+        MovePackage ret = new MovePackage();
+        ret.moveEffects = packEff;
+        ret.type = StaticData.FIRE;
+        ret.moveName = "Flame Slash";
+        ret.numLeft = move2UsesLeft;
+        ret.description = "A sword slash with some extra heat.";
+
         return ret;
     }
     //Cleanse
-    public override Move[] useMove3()
+    public override MovePackage useMove3()
     {
         Effect eff = new Effect();
         eff.numTargets = 1;
         eff.effect = StaticData.NORM;
 
-        Move[] ret = { eff };
+        Move[] packEff = { eff };
+
+        MovePackage ret = new MovePackage();
+        ret.moveEffects = packEff;
+        ret.type = StaticData.FIRE;
+        ret.moveName = "Cleanse";
+        ret.numLeft = move3UsesLeft;
+        ret.description = "Removes a condition.";
+
         return ret;
     }
     //Pyroette
-    public override Move[] useMove4()
+    public override MovePackage useMove4()
     {
         AffinityAttack aff = new AffinityAttack();
         aff.numTargets = 4;
@@ -58,10 +82,18 @@ public class Sita : PlayerCharacter
         eff.effect = StaticData.FIRE;
 
         Recoil rec = new Recoil();
-        rec.numTargets = 1;
+        rec.numTargets = 0;
         rec.attackStrength = 20;
 
-        Move[] ret = { aff, eff, rec };
+        Move[] packEff = { aff, eff, rec };
+
+        MovePackage ret = new MovePackage();
+        ret.moveEffects = packEff;
+        ret.type = StaticData.FIRE;
+        ret.moveName = "Pyroette";
+        ret.numLeft = move4UsesLeft;
+        ret.description = "Sita's ultimate flame move.";
+
         return ret;
     }
 

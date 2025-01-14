@@ -10,6 +10,8 @@ public static class StaticData
     public static int WIND = 3;
     public static int WOOD = 4;
 
+    public static Color[] colorByType = { Color.white, new Color(1, 0.4f, 0.4f), Color.cyan, Color.green, new Color(172f / 255, 124f / 255, 80f / 255) };
+
     private static float[,] effectivenessChart =
     {
         /*Norm[0]*/{ 1, 1, 1, 1, 1 },

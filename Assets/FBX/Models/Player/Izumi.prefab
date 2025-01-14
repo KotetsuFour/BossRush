@@ -437,15 +437,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd0a10f35ba29f04389967e5161a4386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 0
-  currentHP: 0
-  physAttack: 0
-  specAttack: 0
-  physDefense: 0
-  specDefense: 0
-  type: 0
+  maxHP: 200
+  currentHP: 200
+  physAttack: 60
+  specAttack: 20
+  physDefense: 60
+  specDefense: 20
+  type: 4
   activeEffect: 0
-  move1UsesLeft: 0
-  move2UsesLeft: 0
-  move3UsesLeft: 0
-  move4UsesLeft: 0
+  displayName: Izumi
+  displayNameWithType: Izumi (WOOD)
+  move1UsesLeft: 50
+  move2UsesLeft: 25
+  move3UsesLeft: 30
+  move4UsesLeft: 5

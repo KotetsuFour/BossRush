@@ -15,7 +15,12 @@ public abstract class GameEntity : MonoBehaviour
 
     public void takeDamage(int amount)
     {
-        currentHP = Mathf.Clamp(currentHP + amount, 0, maxHP);
+        currentHP = Mathf.Clamp(currentHP - amount, 0, maxHP);
+    }
+
+    public bool isAlive()
+    {
+        return currentHP > 0;
     }
 
     public abstract class Move
@@ -33,9 +38,9 @@ public abstract class GameEntity : MonoBehaviour
             foreach (GameEntity ge in targets)
             {
                 float damage = Mathf.Max(0,
-                    ((attackStrength + (physical ? user.physAttack : user.specAttack))
-                    * StaticData.effectiveness(attackType, ge.type))
-                     - (physical ? ge.physDefense : ge.specDefense));
+                    (attackStrength + (physical ? user.physAttack : user.specAttack)
+                    - (physical ? ge.physDefense : ge.specDefense))
+                    * StaticData.effectiveness(attackType, ge.type));
                 ge.takeDamage(Mathf.RoundToInt(damage));
            }
         }

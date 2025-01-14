@@ -493,15 +493,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd403751ec125449adfb9b6ed07eb3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 0
-  currentHP: 0
-  physAttack: 0
-  specAttack: 0
-  physDefense: 0
-  specDefense: 0
-  type: 0
+  maxHP: 200
+  currentHP: 200
+  physAttack: 40
+  specAttack: 50
+  physDefense: 30
+  specDefense: 20
+  type: 1
   activeEffect: 0
-  move1UsesLeft: 0
-  move2UsesLeft: 0
-  move3UsesLeft: 0
-  move4UsesLeft: 0
+  displayName: Sita
+  displayNameWithType: Sita (FIRE)
+  move1UsesLeft: 50
+  move2UsesLeft: 30
+  move3UsesLeft: 10
+  move4UsesLeft: 5

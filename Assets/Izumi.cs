@@ -11,7 +11,7 @@ public class Izumi : PlayerCharacter
     }
 
     //Flurry
-    public override Move[] useMove1()
+    public override MovePackage useMove1()
     {
         Attack att = new Attack();
         att.numTargets = 1;
@@ -19,21 +19,37 @@ public class Izumi : PlayerCharacter
         att.attackType = StaticData.NORM;
         att.physical = true;
 
-        Move[] ret = { att };
+        Move[] packEff = { att };
+
+        MovePackage ret = new MovePackage();
+        ret.moveEffects = packEff;
+        ret.type = StaticData.WOOD;
+        ret.moveName = "Flurry";
+        ret.numLeft = move1UsesLeft;
+        ret.description = "A barrage of punches.";
+
         return ret;
     }
     //Block
-    public override Move[] useMove2()
+    public override MovePackage useMove2()
     {
         Effect eff = new Effect();
         eff.numTargets = 0;
         eff.effect = StaticData.WOOD;
 
-        Move[] ret = { eff };
+        Move[] packEff = { eff };
+
+        MovePackage ret = new MovePackage();
+        ret.moveEffects = packEff;
+        ret.type = StaticData.WOOD;
+        ret.moveName = "Block";
+        ret.numLeft = move2UsesLeft;
+        ret.description = "Negate an attack.";
+
         return ret;
     }
     //Wooden Leg
-    public override Move[] useMove3()
+    public override MovePackage useMove3()
     {
         Attack att = new Attack();
         att.numTargets = 1;
@@ -41,11 +57,19 @@ public class Izumi : PlayerCharacter
         att.attackType = StaticData.WOOD;
         att.physical = true;
 
-        Move[] ret = { att };
+        Move[] packEff = { att };
+
+        MovePackage ret = new MovePackage();
+        ret.moveEffects = packEff;
+        ret.type = StaticData.WOOD;
+        ret.moveName = "Wooden Leg";
+        ret.numLeft = move3UsesLeft;
+        ret.description = "A powerful kick.";
+
         return ret;
     }
     //Spin Kick
-    public override Move[] useMove4()
+    public override MovePackage useMove4()
     {
         Attack att = new Attack();
         att.numTargets = 1;
@@ -53,7 +77,15 @@ public class Izumi : PlayerCharacter
         att.attackType = StaticData.WOOD;
         att.physical = true;
 
-        Move[] ret = { att };
+        Move[] packEff = { att };
+
+        MovePackage ret = new MovePackage();
+        ret.moveEffects = packEff;
+        ret.type = StaticData.WOOD;
+        ret.moveName = "Spin Kick";
+        ret.numLeft = move4UsesLeft;
+        ret.description = "Izumi's ultimate wood move.";
+
         return ret;
     }
 

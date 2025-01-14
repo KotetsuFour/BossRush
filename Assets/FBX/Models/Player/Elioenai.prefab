@@ -369,15 +369,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eec97d2c06f7dd46959f71cf4ecbc61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 0
-  currentHP: 0
-  physAttack: 0
-  specAttack: 0
-  physDefense: 0
-  specDefense: 0
-  type: 0
+  maxHP: 200
+  currentHP: 200
+  physAttack: 20
+  specAttack: 30
+  physDefense: 10
+  specDefense: 50
+  type: 2
   activeEffect: 0
-  move1UsesLeft: 0
-  move2UsesLeft: 0
-  move3UsesLeft: 0
-  move4UsesLeft: 0
+  displayName: Elioenai
+  displayNameWithType: Elioenai (WATER)
+  move1UsesLeft: 40
+  move2UsesLeft: 20
+  move3UsesLeft: 10
+  move4UsesLeft: 5
