@@ -6,7 +6,7 @@ using TMPro;
 
 public class PokemonManager : MonoBehaviour
 {
-    public static float SPIN_TIME = 3f;
+    public static float SPIN_TIME = 1f;
 
     [SerializeField] private Sita sita;
     [SerializeField] private Elioenai elio;
@@ -579,6 +579,7 @@ public class PokemonManager : MonoBehaviour
         {
             if (timer <= 0)
             {
+                setPlayerPositions();
                 if (registeredMove.damageParticles != null)
                 {
                     StaticData.findDeepChild(currentEnemy.transform, registeredMove.damageParticles)

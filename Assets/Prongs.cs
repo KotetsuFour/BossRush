@@ -6,7 +6,7 @@ public class Prongs : PokemonEnemy
 {
     public override NPCMove nextAttack(PlayerCharacter opponent)
     {
-        if (opponent.type == StaticData.WIND)
+        if (opponent.type != StaticData.FIRE)
         {
             Attack att = new Attack();
             att.numTargets = 1;
