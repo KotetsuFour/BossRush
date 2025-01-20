@@ -27,6 +27,9 @@ public class Sita : PlayerCharacter
         ret.moveName = "Slash";
         ret.numLeft = move1UsesLeft;
         ret.description = "A standard sword slash.";
+        ret.animationTime = 1.267f;
+        ret.animationToActivate = "Attack1";
+        ret.damageParticles = "NormalDamage";
 
         return ret;
     }
@@ -47,6 +50,10 @@ public class Sita : PlayerCharacter
         ret.moveName = "Flame Slash";
         ret.numLeft = move2UsesLeft;
         ret.description = "A sword slash with some extra heat.";
+        ret.animationTime = 4.8f;
+        ret.animationToActivate = "Attack2";
+        ret.attackParticles = "FireSword";
+        ret.damageParticles = "FireDamage";
 
         return ret;
     }
@@ -65,6 +72,8 @@ public class Sita : PlayerCharacter
         ret.moveName = "Cleanse";
         ret.numLeft = move3UsesLeft;
         ret.description = "Removes a condition.";
+        ret.animationTime = 1.133f;
+        ret.animationToActivate = "Attack3";
 
         return ret;
     }
@@ -93,6 +102,10 @@ public class Sita : PlayerCharacter
         ret.moveName = "Pyroette";
         ret.numLeft = move4UsesLeft;
         ret.description = "Sita's ultimate flame move.";
+        ret.animationTime = 1.867f;
+        ret.animationToActivate = "Attack4";
+        ret.attackParticles = "FullFlame";
+        ret.damageParticles = "FireDamage";
 
         return ret;
     }

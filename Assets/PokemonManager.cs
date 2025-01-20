@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PokemonManager : MonoBehaviour
 {
     public static float SPIN_TIME = 1f;
+    public static float DAMAGE_LINGER_TIME = 1f;
 
     [SerializeField] private Sita sita;
     [SerializeField] private Elioenai elio;
@@ -60,7 +62,7 @@ public class PokemonManager : MonoBehaviour
     private Dictionary<string, AudioClip> soundDictionary;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         soundDictionary = new Dictionary<string, AudioClip>();
         for (int q = 0; q < soundKeys.Count; q++)
@@ -169,10 +171,6 @@ public class PokemonManager : MonoBehaviour
             Destroy(currentEnemy.gameObject);
         }
         PokemonEnemy enem = nextEnemy();
-        if (enem == null)
-        {
-            //TODO end this battle
-        }
 
         enem.transform.position = enemyStart.position;
         currentEnemy = enem;
@@ -211,8 +209,8 @@ public class PokemonManager : MonoBehaviour
     }
     private void killPlayer()
     {
-        //currentPlayer.GetComponent<Animator>();
-        timer = 2;
+        currentPlayer.GetComponent<Animator>().Play("Death");
+        timer = 2.2f;
         selectionMode = SelectionMode.PLAYER_FALL;
     }
     public void attack1()
@@ -405,6 +403,7 @@ public class PokemonManager : MonoBehaviour
                     if (target != null)
                     {
                         movePart.execute(currentPlayer, new GameEntity[] { target });
+                        target.GetComponent<Animator>().Play("Idle");
                     }
                 }
             }
@@ -463,6 +462,11 @@ public class PokemonManager : MonoBehaviour
                     StaticData.findDeepChild(menu, "NextNote").GetComponent<TextMeshProUGUI>()
                         .text = $"The demon's next familiar is {next.displayName}.";
                 }
+                else
+                {
+                    StaticData.findDeepChild(menu, "Win").gameObject.SetActive(true);
+                    selectionMode = SelectionMode.FIN;
+                }
                 if (!currentPlayer.isAlive())
                 {
                     killPlayer();
@@ -488,7 +492,8 @@ public class PokemonManager : MonoBehaviour
                 }
                 else
                 {
-                    //TODO fail
+                    StaticData.findDeepChild(menu, "Lose").gameObject.SetActive(true);
+                    selectionMode = SelectionMode.FIN;
                 }
             }
         }
@@ -583,14 +588,14 @@ public class PokemonManager : MonoBehaviour
                 if (registeredMove.damageParticles != null)
                 {
                     StaticData.findDeepChild(currentEnemy.transform, registeredMove.damageParticles)
-                        .GetComponent<ParticleEffect>().playTimed(1.5f);
+                        .GetComponent<ParticleEffect>().playTimed(DAMAGE_LINGER_TIME);
                 }
                 if (registeredMove.damageSound != null)
                 {
                     AudioPlayer player = Instantiate(audioPlayer);
-                    player.playTimed(soundDictionary[registeredMove.damageSound], 1.5f);
+                    player.playTimed(soundDictionary[registeredMove.damageSound], DAMAGE_LINGER_TIME);
                 }
-                timer = 1.5f;
+                timer = DAMAGE_LINGER_TIME;
                 applyEffects();
 
                 selectionMode = SelectionMode.ENEMY_DAMAGE_ANIMATION;
@@ -628,10 +633,22 @@ public class PokemonManager : MonoBehaviour
             selectionMode = SelectionMode.HPCHANGE;
         }
     }
+    public void quit()
+    {
+        StaticData.quit();
+    }
+    public void retry()
+    {
+        StaticData.retry();
+    }
+    public void nextLevel()
+    {
+        SceneManager.LoadScene("FF");
+    }
 
     public enum SelectionMode
     {
         INITIAL_SPIN, STANDBY, ENEMY_RISE, ENEMY_FALL, HPCHANGE, SPIN, PLAYER_FALL, READY_ATTACK,
-        PLAYER_ATTACK_ANIMATION, ENEMY_DAMAGE_ANIMATION, ENEMY_MOVE, PLAYER_DAMAGE_ANIMATION
+        PLAYER_ATTACK_ANIMATION, ENEMY_DAMAGE_ANIMATION, ENEMY_MOVE, PLAYER_DAMAGE_ANIMATION, FIN
     }
 }

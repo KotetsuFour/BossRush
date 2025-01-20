@@ -16,6 +16,12 @@ public abstract class PlayerCharacter : GameEntity
     public abstract MovePackage useMove3();
     public abstract MovePackage useMove4();
 
+    public float die()
+    {
+        GetComponent<Animator>().Play("Death");
+        return 2.2f;
+    }
+
     public class MovePackage
     {
         public string moveName;

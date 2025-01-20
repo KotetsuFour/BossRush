@@ -18,6 +18,7 @@ public class Vigarde : PokemonEnemy
             ret.moveName = "Splash";
             ret.moveEffects = new Move[] { att };
             ret.animationTime = 1.5f;
+            ret.damageParticles = "WaterDamage";
             return ret;
         }
         else if (currentHP <= maxHP / 2)
@@ -44,6 +45,7 @@ public class Vigarde : PokemonEnemy
             ret.moveName = "Sled";
             ret.moveEffects = new Move[] { att };
             ret.animationTime = 1.5f;
+            ret.damageParticles = "NormalDamage";
             return ret;
         }
     }

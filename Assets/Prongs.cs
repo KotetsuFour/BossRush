@@ -22,6 +22,7 @@ public class Prongs : PokemonEnemy
             ret.moveName = "Leech";
             ret.moveEffects = new Move[] { att, hel };
             ret.animationTime = 1.5f;
+            ret.damageParticles = "WoodDamage";
             return ret;
         }
         else
@@ -36,6 +37,7 @@ public class Prongs : PokemonEnemy
             ret.moveName = "Impale";
             ret.moveEffects = new Move[] { att };
             ret.animationTime = 1.5f;
+            ret.damageParticles = "NormalDamage";
             return ret;
         }
     }

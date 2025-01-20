@@ -27,6 +27,9 @@ public class Izumi : PlayerCharacter
         ret.moveName = "Flurry";
         ret.numLeft = move1UsesLeft;
         ret.description = "A barrage of punches.";
+        ret.animationTime = 2.967f;
+        ret.animationToActivate = "Attack1";
+        ret.damageParticles = "NormalDamage";
 
         return ret;
     }
@@ -45,6 +48,8 @@ public class Izumi : PlayerCharacter
         ret.moveName = "Block";
         ret.numLeft = move2UsesLeft;
         ret.description = "Negate an attack.";
+        ret.animationTime = 2.5f;
+        ret.animationToActivate = "Attack2";
 
         return ret;
     }
@@ -65,6 +70,9 @@ public class Izumi : PlayerCharacter
         ret.moveName = "Wooden Leg";
         ret.numLeft = move3UsesLeft;
         ret.description = "A powerful kick.";
+        ret.animationTime = 2.5f;
+        ret.animationToActivate = "Attack3";
+        ret.damageParticles = "WoodDamage";
 
         return ret;
     }
@@ -85,6 +93,9 @@ public class Izumi : PlayerCharacter
         ret.moveName = "Spin Kick";
         ret.numLeft = move4UsesLeft;
         ret.description = "Izumi's ultimate wood move.";
+        ret.animationTime = 1.833f;
+        ret.animationToActivate = "Attack4";
+        ret.damageParticles = "WoodDamage";
 
         return ret;
     }

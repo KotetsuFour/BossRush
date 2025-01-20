@@ -18,6 +18,7 @@ public class Teekl : PokemonEnemy
             ret.moveName = "Fire Fang";
             ret.moveEffects = new Move[] { att };
             ret.animationTime = 1.5f;
+            ret.damageParticles = "FireDamage";
             return ret;
         }
         else
@@ -32,6 +33,7 @@ public class Teekl : PokemonEnemy
             ret.moveName = "Maul";
             ret.moveEffects = new Move[] { att };
             ret.animationTime = 1.5f;
+            ret.damageParticles = "NormalDamage";
             return ret;
         }
     }

@@ -27,6 +27,9 @@ public class Elioenai : PlayerCharacter
         ret.moveName = "Bubble";
         ret.numLeft = move1UsesLeft;
         ret.description = "A standard water spell.";
+        ret.animationTime = 1.033f;
+        ret.animationToActivate = "Attack1";
+        ret.damageParticles = "WaterDamage";
 
         return ret;
     }
@@ -45,6 +48,8 @@ public class Elioenai : PlayerCharacter
         ret.moveName = "Relieve";
         ret.numLeft = move2UsesLeft;
         ret.description = "Heals an ally.";
+        ret.animationTime = 1.133f;
+        ret.animationToActivate = "Attack2";
 
         return ret;
     }
@@ -63,6 +68,8 @@ public class Elioenai : PlayerCharacter
         ret.moveName = "Meditate";
         ret.numLeft = move3UsesLeft;
         ret.description = "Heals Elioenai.";
+        ret.animationTime = 3.233f;
+        ret.animationToActivate = "Attack3";
 
         return ret;
     }
@@ -83,6 +90,9 @@ public class Elioenai : PlayerCharacter
         ret.moveName = "Whirlpool";
         ret.numLeft = move4UsesLeft;
         ret.description = "Elioenai's ultimate water move.";
+        ret.animationTime = 1.7f;
+        ret.animationToActivate = "Attack4";
+        ret.damageParticles = "WaterDamage";
 
         return ret;
     }

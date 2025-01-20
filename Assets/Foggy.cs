@@ -18,6 +18,7 @@ public class Foggy : PokemonEnemy
             ret.moveName = "Wind Slash";
             ret.moveEffects = new Move[] { att };
             ret.animationTime = 1.5f;
+            ret.damageParticles = "WindDamage";
             return ret;
         }
         else
@@ -32,6 +33,7 @@ public class Foggy : PokemonEnemy
             ret.moveName = "Scratch";
             ret.moveEffects = new Move[] { att };
             ret.animationTime = 1.5f;
+            ret.damageParticles = "NormalDamage";
             return ret;
         }
     }
